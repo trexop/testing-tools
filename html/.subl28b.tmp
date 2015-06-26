@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>Testing zone</title>
+		<meta charset="utf-8">
+		<link rel="icon" type="image/png" href="img/favicon.png">
+		<link rel="stylesheet" type="text/css" href="/css/materialHeader.css">
+		<script type="text/javascript" src="/js/opacityScroll.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div id="header">
+			<div id="logotype"></div>
+			<div id="settingsButton" onclick="showhide('settings-box')"></div>
+			<div class="button2"></div>
+			<div class="button3"></div>
+		</div>
+		<div class="text-box">
+			<div class="col1">
+				<div id="scrollbox">
+					Пролистано: 0px
+				</div>
+			</div>
+			<div class="col2">
+				<div id="uptime"></div>
+			</div>
+			<div class="col3">
+				<div id="timer">0 seconds elapsed</div>
+			</div>
+			<div id="settings-box">
+				<div class="block-border"></div>
+				<ul class="sidemenu">
+					<li class="vr">Кнопка:</li>
+					<li class="vr">Радио:</li>
+				</ul>
+				<ul class="sidemenu"> 
+						<li class="vr">
+							<button class="button">Вкл.</button>
+						</li>
+						<li class="vr">
+							<input type="radio" value="1">
+							<input type="radio" value="2">
+							<input type="radio" value="3">
+						</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
