@@ -5,8 +5,8 @@
 		path: "./",
 		css: "./css/global.css",
 		index: "./html",
-    	images: "./html/images/",
-    	fonts: "./fonts/"
+    		images: "./html/images/",
+    		fonts: "./fonts/"
 	},
 	requests-allowed: {
 		path: ["/", "html", "css", "js", "font"],
@@ -14,9 +14,9 @@
 	},
 	content-types: {
 		plain: {"content-type": "text/plain"},
-    	html: {"content-type": "text/html"},
-    	css: {"content-type": "text/css"},
-    	js: {"content-type": "text/javascript"},
-    	svg: {"content-type": "image/svg+xml"}
+    		html: {"content-type": "text/html"},
+    		css: {"content-type": "text/css"},
+    		js: {"content-type": "text/javascript"},
+    		svg: {"content-type": "image/svg+xml"}
 	}
 }
