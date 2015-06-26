@@ -17,11 +17,11 @@ var 	path = './',
 	hashes = ['md5', 'sha1', 'sha256', 'sha224'];
 
 var t = { // типы контента отдельно
-    plain: {'content-type': 'text/plain'},
-    html: {'content-type': 'text/html'},
-    css: {'content-type': 'text/css'},
-    js: {'content-type': 'text/javascript'},
-    svg: {'content-type': 'image/svg+xml'}
+    	plain: {'content-type': 'text/plain'},
+    	html: {'content-type': 'text/html'},
+    	css: {'content-type': 'text/css'},
+    	js: {'content-type': 'text/javascript'},
+    	svg: {'content-type': 'image/svg+xml'}
 };
 
 function in_array(what, where) { // проверяет, есть ли значение в массиве
