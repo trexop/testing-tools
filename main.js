@@ -1,20 +1,20 @@
-var http = require('http'),
+var 	http = require('http'),
 	url = require('url'),
 	fs = require('fs'),
-    date = require('./js/DatePlain');
+    	date = require('./js/DatePlain');
 
-var start = date.getDate().rest.toString(), // дата и время запуска сервера
-    ip = '127.0.0.1',
+var 	start = date.getDate().rest.toString(), // дата и время запуска сервера
+    	ip = '127.0.0.1',
 	port = 1337;
 
 // относительные пути к файлам
-var path = './',
+var 	path = './',
 	css = './css/global.css',
 	index = './html',
-    images = './html/images/',
-    fonts = './fonts/'
+    	images = './html/images/',
+    	fonts = './fonts/'
 	fourtyfour = read('./html/404.html').content,
-    hashes = ['md5', 'sha1', 'sha256', 'sha224'];
+	hashes = ['md5', 'sha1', 'sha256', 'sha224'];
 
 var t = { // типы контента отдельно
     plain: {'content-type': 'text/plain'},
