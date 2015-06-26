@@ -1,22 +1,22 @@
 {
-	ip: "127.0.0.1",
-	port: 1337,
-	files-location: {
-		path: "./",
-		css: "./css/global.css",
-		index: "./html",
-    		images: "./html/images/",
-    		fonts: "./fonts/"
+	"ip": "127.0.0.1",
+	"port": 1337,
+	"files-location": {
+		"path": "./",
+		"css": "./css/global.css",
+		"index": "./html",
+    		"images": "./html/images/",
+    		"fonts": "./fonts/"
 	},
-	requests-allowed: {
-		path: ["/", "html", "css", "js", "font"],
-		query: ["async"]	
+	"requests-allowed": {
+		"path": ["/", "html", "css", "js", "font"],
+		"query": ["async"]	
 	},
-	content-types: {
-		plain: {"content-type": "text/plain"},
-    		html: {"content-type": "text/html"},
-    		css: {"content-type": "text/css"},
-    		js: {"content-type": "text/javascript"},
-    		svg: {"content-type": "image/svg+xml"}
+	"content-types": {
+		"plain": {"content-type": "text/plain"},
+    		"html": {"content-type": "text/html"},
+    		"css": {"content-type": "text/css"},
+    		"js": {"content-type": "text/javascript"},
+    		"svg": {"content-type": "image/svg+xml"}
 	}
 }
