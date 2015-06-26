@@ -1,6 +1,7 @@
 {
 	"ip": "127.0.0.1",
 	"port": 1337,
+	"auto_main_page_open": true,
 	"files-location": {
 		"path": "./",
 		"css": "./css/global.css",

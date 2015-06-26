@@ -4,9 +4,11 @@ var http = require('http'),
     date = require('./js/DatePlain'),
     open = require('./js/Open');
 
+var config = JSON.parse(fs.readFileSync('config.json', 'utf-8'));
+
 var start = date.getDate().rest.toString(), // дата и время запуска сервера
-    ip = '127.0.0.1',
-    port = 1337;
+    ip = config.ip,
+    port = config.port;
 
 // относительные пути к файлам
 var path = './',
