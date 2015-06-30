@@ -1,13 +1,14 @@
 var http = require('http'),
     url = require('url'),
     fs = require('fs'),
+    formidable = require('formidable'),
     date = require('./js/DatePlain'),
     open = require('./js/Open');
 
 var config = JSON.parse(fs.readFileSync('config.json', 'utf-8'));
 
 var start = date.getDate().rest.toString(), // дата и время запуска сервера
-    ip = config.ip,
+    host = config.host,
     port = config.port;
 
 // относительные пути к файлам
@@ -155,4 +156,4 @@ function read(f) {
 
 console.log('Сервер запущен ' + date.getDate().date + ' в ' + date.getDate().time);
 console.log('Порт ' + port + ' доступен');
-open('http://' + ip.toString() + ':' + port.toString());
+open('http://' + host.toString() + ':' + port.toString());
