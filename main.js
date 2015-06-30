@@ -1,8 +1,10 @@
 var http = require('http'),
     url = require('url'),
     fs = require('fs'),
-    formidable = require('formidable'),
+    // = require(''), ещё какой-нибудь модуль подключить можно
     date = require('./js/DatePlain'),
+    http = require('http'),
+    https = require("https"),
     open = require('./js/Open');
 
 var config = JSON.parse(fs.readFileSync('config.json', 'utf-8'));
@@ -56,16 +58,31 @@ function read(f) {
     return (file);
 }
 
+var myPublicIp = function(){
+    http.get({'host': 'api.ipify.org', 'port': 80, 'path': '/'}, function(resp) {
+        resp.on('data', function(ip) {
+            return(ip.toString());
+        });
+    });
+};
+
 (function() { // основная функция. Оставить одну пару if/else на каждый тип запроса. Остальное нахуй.
     http.createServer(function(req, res) { // объект сервера с req/res
         var request = { // слушаем реквесты, записываем в массив
             path: url.parse(req.url).pathname, // путь
-            query: url.parse(req.url).query // аргумент
+            query: url.parse(req.url).query, // аргумент
+            method: req.method
         };
+        '''
+        if(request.method == "POST"){
+            Заготовка для обработчика POST
+        }
+        '''
         if (request.query == 'async') { // отделяю асинхронные запросы от обычных
             var async = {
                 uptime: {type: t.plain, response: start},
                 random: {type: t.plain, response: Math.random().toString()},
+                publicIp: {type: t.plain, response: myPublicIp},
                 css: {type: t.css, response: read(css).content}
             };
             var arr = Object.keys(async),
@@ -103,13 +120,13 @@ function read(f) {
                 res.writeHead(200, t.css);
                 res.end(data);
             });
-        } else if (contains(request.path, 'js')) { // отдельный вызов для стилей
+        } else if (contains(request.path, 'js')) { // отдельный вызов для клиентских скриптов
             fs.readFile((path + request.path), function(err, data) {
                 if (err) console.log(err);
                 res.writeHead(200, t.js);
                 res.end(data);
             });
-        } else if (contains(request.path, 'assets')) { // отдельный вызов для стилей
+        } else if (contains(request.path, 'assets')) { // отдельный вызов для хуй пойми чего
             fs.readFile((path + request.path), function(err, data) {
                 if (err) console.log(err);
                 res.writeHead(200, t.js);
