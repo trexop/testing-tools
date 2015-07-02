@@ -10,7 +10,7 @@
     		"fonts": "./fonts/"
 	},
 	"requests_allowed": {
-		"path": ["/", "html", "css", "js", "font", "assets"],
+		"path": ["html", "css", "js", "assets"],
 		"query": ["async"],
 		"method": ["GET", "POST"]	
 	},

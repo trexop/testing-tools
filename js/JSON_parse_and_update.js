@@ -11,6 +11,7 @@ in_array(request.path, config.requests_allowed.path) ? function() {
             res.end(fourtyfour);
         } 
         res.writeHead(200, "t." + request.path);
+        res.end(data);
     }
 } : function() {
     var r;
