@@ -112,7 +112,7 @@ function getMyPublicIp(){
                 res.writeHead(200, t.js);
                 res.end(data);
             });
-        } else if (contains(request.path, 'assets')) { // отдельный вызов для хуй пойми чего
+        } else if (contains(request.path, 'assets')) { // Возможно, пригодится в будущем
             fs.readFile((path + request.path), function(err, data) {
                 if (err) {
                     res.writeHead(404, t.html);
@@ -121,7 +121,7 @@ function getMyPublicIp(){
                 res.writeHead(200, t.js);
                 res.end(data);
             });
-        } else if (contains(request.path, 'img')) { // жопой чую, что-то тут не так
+        } else if (contains(request.path, 'img')) { // Возможно, это следует переписать по-другому
             fs.readFile((path + request.path), function(err, data) {
                 if (err) {
                     res.writeHead(404, t.html);
